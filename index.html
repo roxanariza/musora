@@ -3,8 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <title>Musora</title>
+    <meta name="description" content="Coming Soon">
+    <meta name="keywords" content="music lessons, online music lessons, video music lessons, music lessons for beginners">
+    <!-- Social Media -->
+    <meta property="og:title" content="Musora">
+    <meta property="og:description" content="Coming Soon">
+    <meta property="og:url" content="https://www.musora.com">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.drumeo.com/styles/animate.css">
+    <style>
+        body {
+            background: #202020;
+        }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -50px;
+            visibility: hidden;
+        }
+        .no-padding {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        a {
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
+            -o-transition: all .2s;
+            transition: all .2s;
+        }
+        a.join,
+        .join {
+            display: inline-block;
+            font: 400 28px/1em "Open Sans";
+            text-transform: uppercase;
+            background: #27ae60;
+            border-radius: 10px;
+            color: #FFF;
+            padding: 17px 7%;
+            border:none;
+        }
+        a.join:hover,
+        .join:hover { background: #2ab865; }
+
+        .hero-header {
+            background-color: #0c243b;
+            background-size: 250px;
+            margin: 0 auto;
+        }
+        .hero-header h1 {
+            font: 700 34px/1.3em "Open Sans";
+            color: #fff;
+            text-transform: capitalize;
+        }
+        .hero-header p {
+            font: 500 24px/1.3em "Open Sans";
+            color: #fff;
+            text-transform: capitalize;
+        }
+        .hero-header .flex-video {
+            margin: 0 auto;
+        }
+        .hero-header .line-arrow {
+            width: auto;
+            position: relative;
+            display: inline-block;
+        }
+        .hero-header .line-arrow .line {
+            height: 2px;
+            background: #0b76db;
+            float: left;
+        }
+        .hero-header .line-arrow .arrow {
+            float: left;
+            overflow: hidden;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: -14px 10px 0;
+            border-top: 2px solid #0b76db;
+            border-left: 2px solid #0b76db;
+            transform: rotate(-148deg) skew(-30deg);
+        }
+        .hero-header #text-scroll {
+            display: inline-block;
+            margin:0 auto;
+        }
+        .hero-header #text-scroll ul {
+            max-height: 44px;
+            overflow: hidden;
+        }
+        .hero-header #text-scroll li {
+            font: 600 34px/1.3em "Open Sans";
+            color: #0b76db;
+            list-style: none;
+        }
+        .hero-header a.join.trailer { background: #0b76db; }
+        .hero-header a.join.trailer:hover { background: #0f84f2; }
+        @media screen {
+            .hero-header { padding: 40vh 0; }
+            .hero-header h1 {
+                margin: 0 auto 10px;
+                font-size: 21px;
+            }
+            .hero-header p {
+                margin: 0 auto 10px;
+                font-size: 17px;
+            }
+            .hero-header .icon-container img { max-width: 150px; }
+            .hero-header #text-scroll { width: 300px; }
+            .hero-header .line-arrow { margin: 20px auto 10px; }
+            .hero-header .line-arrow .line { width: 130px; }
+            .hero-header #text-scroll li { font-size: 20px; }
+            .hero-header a.join {
+                font-size: 15px;
+                padding: 14px 17px;
+                margin: 25px auto 0;
+                width: auto;
+            }
+        }
+        @media screen and (min-width: 40em) {
+            .hero-header h1 { font-size: 35px; }
+            .hero-header p { font-size: 19px; }
+            .hero-header .icon-container img { max-width: 200px; }
+            .hero-header .line-arrow { margin: 20px auto; }
+            .hero-header .line-arrow .line { width: 250px; }
+            .hero-header #text-scroll { width: 410px; }
+            .hero-header #text-scroll li { font-size: 28px; }
+            .hero-header a.join {
+                font-size: 18px;
+                padding: 13px 3%;
+            }
+            .hero-header a.join.trailer i { font-size: 17px; }
+        }
+        @media screen and (min-width: 64em) {
+            .hero-header h1 {
+                margin: 0 auto 15px;
+                font-size: 48px;
+            }
+            .hero-header p {
+                margin: 0 auto 15px;
+                font-size: 24px;
+            }
+            .hero-header .icon-container img { max-width: 250px; }
+            .hero-header .line-arrow .line { width: 350px; }
+            .hero-header #text-scroll { width: 500px; }
+            .hero-header #text-scroll li { font-size: 34px; }
+            .hero-header a.join {
+                font-size: 22px;
+                padding: 17px 3%;
+            }
+            .hero-header a.join.trailer i { font-size: 20px; }
+        }
+        .price-warning {
+            font: 500 15px/1em "Bree Serif";
+            color: #ffff99;
+            margin: 7px auto 0;
+            text-transform: uppercase;
+        }
+        
+        .footer {
+            background: #202020;
+            color: #fff;
+            padding: 40px 0;
+        }
+        .footer p,
+        .footer a {
+            background: #202020;
+            color: #fff;
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            margin: 0 auto;
+        }
+        .footer a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
-<h1>Coming Soon!</h1>
+<div class="hero-header">
+    <div class="row text-center">
+        <h1 class="small-12 columns animated fadeIn">Musora - Coming Soon</h1>
+    </div>
+</div>
+<div class="footer text-center">
+    <div class="row">
+        <div class="columns">
+            <p>Copyright 2017 - All Rights Reserved &nbsp;-&nbsp;<br class="hide-for-medium">
+                <a href="https://www.drumeo.com/terms-of-use.php" target="_blank">Terms Of Use</a>&nbsp;&nbsp;/&nbsp;
+                <a href="https://www.drumeo.com/privacy-policy.php" target="_blank">Privacy Policy</a></p>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.js"></script>
 </body>
 </html>
